@@ -1,0 +1,64 @@
+<!--
+File name: contact.html
+
+AP CSP Web Design Project: Personal Blog
+Description: This program uses HTML & CSS to create a personal blog with various pages navigable through a sidebar.
+
+*Developer: Radhika Parkhi*
+
+Version: 1.0
+Last modified: 10/19/2024
+-->
+
+
+<!DOCTYPE html>
+<html>
+    <!--head-->
+    <head>
+        <title class="main">Radhika's Blog | Contact</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    </head>
+
+    <!--sidebar div-->
+    <div class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="contact.html">Contact</a>
+    </div>
+
+    <!--dropdown div-->
+    <div class="dropdown" style="float: right">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a class="active" href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!--main headers-->
+    <body>
+        <h1 align="center" style="color:#F5D4A3" class="main">Radhika's Ramblings</h1>
+        <h2 align="center" style="color:#EE9696" class="main">Contact me!</h2>
+    </body>
+
+    <!--text-->
+    <p style="color:#F5D4A3" class="main">
+        <!--gif-->
+       <img src="images/flowers.gif" width="15%" height="15%" >
+        Have any <span class="highlight">questions</span> or <span class="highlight">feedback</span> about my blog? Type your message below and I'll be sure to get back to you soon.
+    </p>
+    <!--form-->
+    <form class="main" action="https://formspree.io/f/xanyygzq" method="POST">
+        <label style="color:#F5D4A3" for="fname">First name:</label><br>
+        <input style="color:#E5539B" type="text" name="First name"><br>
+        <label style="color:#F5D4A3" for="message">Message:</label><br>
+        <textarea style="color:#E5539B" name="Message"></textarea><br>
+        <input style="color:#E5539B" type="submit" value="submit"><br>
+    </form>
+    <!--text-->
+    <p style="color:#F5D4A3" class="main">
+        <i>*disclaimer: the form data is stored & emailed; please do not submit confidential information</i>
+    </p>
+</html>

@@ -1,0 +1,246 @@
+/*
+<!--
+File name: styles.css
+
+AP CSP Web Design Project: Personal Blog
+Description: This program uses HTML & CSS to create a personal blog with various pages navigable through a sidebar.
+
+*Developer: Radhika Parkhi*
+
+Version: 1.0
+Last modified: 10/19/2024
+*/
+
+
+body {
+  /*global styling*/
+  background-color: #8B538D;
+  font-family:'Helvetica', Arial, sans-serif;
+
+  /*LINK STYLING*/
+  /*unvisited link*/
+  a:link {
+    color:#F1A7A7
+  }
+  /*visited link*/
+    a:visited {
+    color: #E5539B;
+  }
+  /*hover over link*/
+  a:hover {
+    color: #F9E5C8;
+    background-color: #E5539B;
+  }
+
+  /*image styling*/
+  img {
+    float: right;
+    margin: 15px;
+  }
+
+  /*hr styling*/
+  hr {
+    border-color:#F1A7A7;
+    margin-left: 180px;
+    margin-right: 20px;
+  }
+
+  /*underordered list styling*/
+  ul {
+    columns: 2;
+  }
+
+  /*main div*/
+  .main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 180px;
+    line-height: 1.4;
+  }
+
+  /*rectangle div*/
+  .rect {
+    height: 120px;
+    width: 220px;
+    background-color: #6c396e;
+    padding: 15px;
+    line-height: 1.5;
+  }
+
+  /*span highlight*/
+  .highlight {
+    background-color:#6c396e;
+  }
+
+  /*SIDEBAR STYLING*/
+  /*sidebar div*/
+  .sidebar {
+    width: 150px;
+    background-color: #6c396e;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    margin-left: 5px;
+  }
+  /*sidebar text*/
+  .sidebar a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #F9E5C8;
+    display: block;
+    padding: 15px;
+  }
+  /*sidebar active page*/
+  .sidebar a.active {
+    background-color: #E5539B;
+    color: #F9E5C8;
+  }
+  /*sidebar inactive page*/
+  .sidebar a:hover:not(.active) {
+    background-color: #F1A7A7;
+    color: #F9E5C8;
+  }    
+
+  /*MEDIA QUERIES*/
+  /*if screen is <1920px wide, make the sidebar into a topbar*/
+  @media screen and (max-width: 1920px) {
+    /*dropdown restyling*/
+    .dropbtn {
+      display: none;
+    }
+    .dropdown {
+      display: none;
+    }
+  }
+  /*if screen is <1200px wide, make the sidebar into a topbar*/
+  @media screen and (max-width: 1200px) {
+    /*sidebar restyling*/
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      margin: 0px;
+    }
+    .sidebar a {float: left;}
+    /*main restyling*/
+    .main {
+      margin: 20px;
+    }
+    /*hr restyling*/
+    hr {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    /*socials restyling*/
+    .fa-instagram {
+      margin-left: 20px;
+    }
+    /*dropdown restyling*/
+    .dropbtn {
+      display: none;
+    }
+    .dropdown {
+      display: none;
+    }
+  }
+
+  /*if screen is <992px, display the bar stacked vertically*/
+  @media screen and (max-width: 992px) {
+    /*sidebar restyling*/
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+    /*hr restyling*/
+    hr {
+      margin: 20px;
+    }
+    /*socials restyling*/
+    .fa-instagram {
+      margin-left: 20px;
+    }
+    /*dropdown restyling*/
+    .dropbtn {
+      display: none;
+    }
+    .dropdown {
+      display: none;
+    }
+}
+
+  /*if screen is <768px, display the bar as a dropdown menu*/
+  @media screen and (max-width: 768px) {
+    /*dropdown button div*/
+    .dropbtn {
+      background-color: #6c396e;
+      color: #F9E5C8;
+      padding: 15px;
+      font-size: 16px;
+      border: none;
+      width: 80px;
+      display: block;
+    }
+    /*dropdown div*/
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    /*div to hide dropdown content*/
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #6c396e;
+      width: 80px;
+      z-index: 1;
+    }
+    /*dropdown content div*/
+    .dropdown-content a {
+      color: #F9E5C8;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+    }
+    /*hover over dropdown link*/
+    .dropdown-content a:hover {background-color: #F1A7A7;}
+    .dropdown:hover .dropdown-content {display: block;}
+    /*hover over dropdown button*/
+    .dropdown:hover .dropbtn {background-color: #E5539B;}
+    /*sidebar restyling*/
+    .sidebar {
+      display: none
+    }
+    /*main restyling*/
+    .main {
+      margin-top: 20px;
+    }
+  }
+
+  /* FONT AWESOME STYLING */
+  /*fa div*/
+  .fa {
+    padding: 15px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  /* Instagram */
+  .fa-instagram {
+    background: #4c68d7;
+    color: white;
+    margin-left: 180px;
+  }
+  /* Pinterest */
+  .fa-pinterest {
+    background: #E60023;
+    color: white;
+    margin-left: 20px;
+  }
+  /* Spotify */
+  .fa-spotify {
+    background: #1DB954;
+    color: white;
+    margin-left: 20px;
+  }
+}
